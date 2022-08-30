@@ -65,6 +65,31 @@ console.log(' ---- concat -----');
 //* 매개변수로 들어온 배열 이나 값을 기존배열에 합쳐주고 합쳐진 새로운배열을 반환해준다.
 let puls = pokemon.concat(foods,'HaHa');
 console.log(puls);
+let pulsArr = pokemon.concat(number);
+console.log(pulsArr)
+
+console.log(' ---- map -----');
+
+//* map 내가 필요한 값을 배열로 반환해준다 
+let foodArr = foods2.map((item,index)=>{
+  return `${index+1}. 맛있는 ${item}!!`;
+});
+console.log(foodArr);
+
+console.log(' ---- filter -----');
+//* filter 조건이 '참'인 값을 배열로 반환해준다.
+let data = foods2.filter((item)=>{
+  return item.length === 3;
+});
+console.log(data);
+//* some 조건에 만족하는것이 있으면 true 없으면 false를 반환해준다.
+let data2 = foods2.some((item)=>{
+  return item.endsWith('찜'); //배열 foods2 에 찜으로 끝나는 요소가있어서 true 를 반환.
+});
+console.log(data2);
+
+
+
 
 
 
